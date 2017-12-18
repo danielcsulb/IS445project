@@ -16,9 +16,6 @@ app.use(express.static(assetsPath))
 app.use(bodyParser.json({ type: 'application/json' }))
 
 
-const viewsFolder = path.resolve(__dirname, 'views')
-
-
 
 app.get('/', (req, res) => {
     res.render('home')
