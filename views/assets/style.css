@@ -121,10 +121,3 @@ tr {
 tr:nth-child(2n) {
     background: rgba(50, 50, 50, 0.20);
 }
-
-
-/* th {
-    padding: 100px;
-    text-align: center;
-    margin-left: 50px;
-} */
