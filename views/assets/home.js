@@ -82,9 +82,9 @@ function findUserWithId(user) {
 function successHandler(users) {
     console.log(`Response has ${users.length} users`)
     if (users.length == 0) {
-        var $table = $("<table border='1'><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th></table>");
+        var $table = $("<table class='table'><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th></tr></thead></table>");
     } else {
-        var $table = $("<table border='1'><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th></th></table>");
+        var $table = $("<table class='table'><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th></th></tr></thead></table>");
         for (let index = 0; index < users.length; index++) {
             const user = users[index]
             const $line = $("<tr></tr>")
@@ -92,9 +92,9 @@ function successHandler(users) {
             $line.append($("<td></td>").html(user.name))
             $line.append($("<td></td>").html(user.email))
             $line.append($("<td></td>").html(user.phone))
-            const detailsButton = $("<button>/button>").text('DETAILS');
-            const editButton = $("<button>/button>").text('EDIT');
-            const deleteButton = $("<button>/button>").text('DELETE');
+            const detailsButton = $("<button id='listButton' class='btn btn-default'>/button>").text('DETAILS');
+            const editButton = $("<button id='listButton' class='btn btn-default'>/button>").text('EDIT');
+            const deleteButton = $("<button id='listButton' class='btn btn-default'>/button>").text('DELETE');
             $line.append(detailsButton);
             $line.append(editButton);
             $line.append(deleteButton);
