@@ -6,19 +6,20 @@ const apiRouter = require('./api')
 
 const app = express()
 
-const assetsFolder = path.resolve(__dirname, 'views/assets')
-app.use(express.static(assetsFolder))
+app.set("view engine", "ejs")
+app.set("views", path.resolve(__dirname, "views"))
+
+const assetsPath = path.resolve(__dirname, 'views/assets')
+app.use(express.static(assetsPath))
+
 
 app.use(bodyParser.json({ type: 'application/json' }))
 
 
-// step 1. define path
 const viewsFolder = path.resolve(__dirname, 'views')
 
-// step 2. set engine
-app.set("view engine", "ejs")
 
-// step 3. render view
+
 app.get('/', (req, res) => {
     res.render('home')
 })

@@ -99,14 +99,6 @@ api.delete('/user/:id', (req, res) => {
 
 
 
-// api.put('user/:index', (req, res) => {
 
-//     const newUser = req.body;
-//     const users = store.getUsers();
-//     users.push(newUser);
-
-//     store.saveUsers(users);
-//     res.json(users)
-// })
 
 module.exports = api
