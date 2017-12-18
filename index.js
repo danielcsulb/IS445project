@@ -17,12 +17,12 @@ app.use(bodyParser.json({ type: 'application/json' }))
 
 
 
-app.get('/', (req, res) => {
+app.get('./', (req, res) => {
     res.render('home')
 })
 
 app.use('/api', apiRouter)
 
-app.listen(8088)
+app.listen(process.env.PORT || 5000)
 
 console.log('App started on 8088...')
